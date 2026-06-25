@@ -42,7 +42,7 @@ function RoadmapRowHeader({
   scope: string;
 }) {
   return (
-    <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 px-4 py-4">
+    <div className="flex flex-col gap-2 px-4 py-4 sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-between sm:gap-x-4 sm:gap-y-1">
       <div className="flex min-w-0 items-baseline gap-3">
         <span className="row-number shrink-0 font-mono text-[13px] font-medium tabular-nums text-accent/45 transition-colors duration-[250ms]">
           [ {number} ]
@@ -52,7 +52,7 @@ function RoadmapRowHeader({
         </h3>
       </div>
       <span
-        className={`font-mono text-[11px] font-semibold uppercase tracking-[0.08em] ${scopeColorClass(scope)}`}
+        className={`self-start font-mono text-[11px] font-semibold uppercase tracking-[0.08em] sm:self-auto ${scopeColorClass(scope)}`}
       >
         {scope}
       </span>
