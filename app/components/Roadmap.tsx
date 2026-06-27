@@ -82,7 +82,7 @@ export function Roadmap() {
               }
             >
             <div className="px-4 pb-2 pt-1 md:pl-[4.25rem] md:pr-5">
-              <DetailBlock label="What it is">{item.whatItIs}</DetailBlock>
+              <DetailBlock label="What we build">{item.whatItIs}</DetailBlock>
 
               {Array.isArray(item.whatItDoes) && item.whatItDoes.length > 0 ? (
                 <DetailBlock label="What it does">
@@ -101,7 +101,9 @@ export function Roadmap() {
                 <DetailBlock label="What it does">{item.whatItDoes}</DetailBlock>
               ) : null}
 
-              <DetailBlock label="Your benefit">{item.whyItMatters}</DetailBlock>
+              <DetailBlock label="Your benefit" boldLabel>
+                {item.whyItMatters}
+              </DetailBlock>
 
               {item.scopeNote && (
                 <p className="mt-1 font-mono text-[12px] leading-relaxed text-foreground/60">

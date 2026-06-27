@@ -5,7 +5,6 @@ export function WhyUs() {
       <ul className="space-y-2">
         {[
           "We build around your existing systems instead of forcing change. PISA and Sun-based stay where they are; we integrate around them.",
-          "No red tape. You talk directly to the engineers building, not an account manager who doesn't know how the software actually works.",
           "No upsells, no shelfware. We only recommend builds with a clear time or revenue ROI.",
           "We're young, fast, and accessible. Call us late, we'll pick up.",
         ].map((item) => (
