@@ -5,10 +5,10 @@ import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { HowWeWork } from "./components/HowWeWork";
 import { NextSteps } from "./components/NextSteps";
-import { OptionalRetainer } from "./components/OptionalRetainer";
 import { Overview } from "./components/Overview";
 import { Roadmap } from "./components/Roadmap";
 import { WhoWeAre } from "./components/WhoWeAre";
+import { WhyUs } from "./components/WhyUs";
 
 export default function Home() {
   return (
@@ -23,16 +23,16 @@ export default function Home() {
         <Overview />
       </FadeIn>
       <FadeIn>
-        <HowWeWork />
-      </FadeIn>
-      <FadeIn>
         <Roadmap />
       </FadeIn>
       <FadeIn>
         <DontGetOverwhelmed />
       </FadeIn>
       <FadeIn>
-        <OptionalRetainer />
+        <WhyUs />
+      </FadeIn>
+      <FadeIn>
+        <HowWeWork />
       </FadeIn>
       <FadeIn>
         <FinePrint />

@@ -24,7 +24,7 @@ export const roadmapItems: RoadmapItem[] = [
       "Flags conflicts on the spot, with the exact line item and the exact mismatch.",
     ],
     whyItMatters:
-      'This is the "domestic rail" problem Steve walked us through. A plan revision happens, the BOM never gets updated, the warehouse pulls the wrong inverter, and the installer\'s on a roof with the wrong product.',
+      "You stop sending installers to the roof with the wrong equipment because a plan revision never made it into the BOM.",
     scopeNote:
       "Low if the plan parses cleanly and the BOM pulls easily from the PISA API. Higher if either gets messy.",
   },
@@ -41,7 +41,7 @@ export const roadmapItems: RoadmapItem[] = [
       "Outputs a deficiency report flagging the exact photos that need retaking.",
     ],
     whyItMatters:
-      "One bad or missing photo kicks the whole lender package back and delays final payment. This catches the kickback inside Sol-Up's four walls instead of the lender's.",
+      "You get final payment sooner because lender packages go out clean the first time instead of bouncing back for bad or missing photos.",
   },
   {
     id: "hoa-submission-generator",
@@ -56,7 +56,7 @@ export const roadmapItems: RoadmapItem[] = [
       "Flags deficiencies before submission — missing skirting language, missing renderings, missing setbacks, whatever each HOA requires.",
     ],
     whyItMatters:
-      'Same problem as a jurisdiction permit kickback, but cheaper to solve and faster to ship. Steve made the strongest case for this on the call ("eliminates a process").',
+      "You stop losing days to HOA rejections by catching missing documents and requirements before the ARC package goes out.",
     scopeNote:
       "Low-Med for 3–5 HOAs. Each additional HOA after that is a small, predictable lift.",
   },
@@ -70,7 +70,7 @@ export const roadmapItems: RoadmapItem[] = [
     whatItDoes:
       "Pulls the project address from PISA, opens the safety plan portal, picks the closest hospital and fire department, completes the form, downloads the PDF.",
     whyItMatters:
-      "Five-minute task done a hundred times a month — roughly 8 hours of Steve's time back, every month. This is also our wedge for standing up reusable browser-automation tooling that the permitting projects downstream will need.",
+      "Your team stops filling out the same safety plan form by hand roughly a hundred times a month.",
   },
   {
     id: "17-point-inspection-scoring",
@@ -85,7 +85,7 @@ export const roadmapItems: RoadmapItem[] = [
       "A management view that surfaces patterns by crew over time.",
     ],
     whyItMatters:
-      "The analysis itself is trivial. The bottleneck is consistent capture. The real win is fewer failed jurisdictional inspections, which are expensive in calendar time.",
+      "You fail fewer jurisdictional inspections because scores are captured consistently and risky jobs get flagged before the inspector is called.",
   },
   {
     id: "permit-form-auto-fill",
@@ -100,7 +100,7 @@ export const roadmapItems: RoadmapItem[] = [
       "Stops at upload-and-submit. Steve reviews and submits.",
     ],
     whyItMatters:
-      "Steve said this is 50–80% of his day on busy days. The complexity is multi-jurisdiction sprawl, which we layer in jurisdiction-by-jurisdiction as ROI proves out.",
+      "Your permitting team gets back most of the day on heavy permit days because jurisdiction portal forms are pre-filled from the plan set instead of typed in by hand.",
   },
   {
     id: "permit-status-monitoring",
@@ -112,7 +112,7 @@ export const roadmapItems: RoadmapItem[] = [
     whatItDoes:
       "Pulls signals from multiple sources (email notifications when they fire, daily portal scrapers when they don't, custom webhooks where available, a simple refresh otherwise) and routes status changes into one feed tied to the PISA permit record.",
     whyItMatters:
-      "Removes a recurring daily-check task across 8–10 jurisdictions.",
+      "Your team stops logging into eight to ten jurisdiction portals every day and still knows right away when a permit status changes.",
     scopeNote:
       "Lots of heterogeneous sources to wire up plus ongoing per-jurisdiction maintenance. Should be built after the auto-fill tool has already mapped each portal's structure.",
   },
@@ -126,7 +126,7 @@ export const roadmapItems: RoadmapItem[] = [
     whatItDoes:
       "If the design files have a text backend, parse values directly. Otherwise vision-parse the diagram, with the model citing the cropped source region next to each extracted value so human review is fast.",
     whyItMatters:
-      "This is the form that takes Steve 30 minutes per submission today. Big time savings if it works.",
+      "Each complex submission saves about thirty minutes of manual data entry by pulling values straight off the electrical drawing.",
     scopeNote: "Drops to Med if a text backend exists. High if vision-only.",
   },
   {
@@ -138,7 +138,7 @@ export const roadmapItems: RoadmapItem[] = [
       "A multimodal capture layer (voice, photo, checklist) tied to paperwork crews already have to do, so clean field data flows back into PISA without adding a separate logging burden.",
     whatItDoes: [],
     whyItMatters:
-      "Clean field-data capture is the shared bottleneck behind several projects above (17-point scoring, photo QA, BOM verification). Building this infrastructure once makes several future projects materially cheaper. High interest from the calls, but horizontal — not a first project.",
+      "Your crews capture field data once, in the flow of work they already do, so downstream tools like photo QA, BOM checks, and inspection scoring all run on reliable data without extra logging.",
     isInfrastructure: true,
   },
 ];

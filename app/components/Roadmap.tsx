@@ -101,7 +101,7 @@ export function Roadmap() {
                 <DetailBlock label="What it does">{item.whatItDoes}</DetailBlock>
               ) : null}
 
-              <DetailBlock label="Why it matters">{item.whyItMatters}</DetailBlock>
+              <DetailBlock label="Your benefit">{item.whyItMatters}</DetailBlock>
 
               {item.scopeNote && (
                 <p className="mt-1 font-mono text-[12px] leading-relaxed text-foreground/60">

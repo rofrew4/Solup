@@ -1,7 +1,7 @@
 const items = [
   {
     title: "Billing",
-    body: "$110/hour, phased and approved one project at a time. Hours billed biweekly after each sync, based on actual time worked. If a phase is tracking over its estimate, we flag it before we go over, not after.",
+    body: "$110/hour, billed biweekly based on actual time worked, one project at a time. If a phase is tracking over estimate, we flag it before we go over.",
   },
   {
     title: "Communication",
@@ -11,13 +11,17 @@ const items = [
     title: "Pause anytime",
     body: "Stop at any phase boundary. You only pay for hours worked through that point. No long-term commitment.",
   },
+  {
+    title: "Optional retainer",
+    body: "Most clients request to stay on a flexible retainer to handle new fixes, updates, and maintenance. This is optional and not always necessary.",
+  },
 ];
 
 export function HowWeWork() {
   return (
     <section className="doc-section">
       <h2 className="doc-h2">How We Work</h2>
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 sm:gap-6">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
         {items.map((item) => (
           <div
             key={item.title}
